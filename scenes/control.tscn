@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://bswiugw0jswps"]
+
+[ext_resource type="Texture2D" uid="uid://ci4frt4hvdnsl" path="res://scenes/icon.svg" id="1_w611t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "probando
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Nivel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Nivel
+"
+
+[node name="NIvel_num" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "1
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -48.0
+offset_right = 62.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "Salir juego
+"
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "Opciones"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Nueva partidfa
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_w611t")
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer2"]
+layout_mode = 2
