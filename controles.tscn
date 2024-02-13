@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://h485hjr224w8"]
+
+[ext_resource type="Script" path="res://Controles.gd" id="1_8tofh"]
+[ext_resource type="Texture2D" uid="uid://bvsq7d137bspe" path="res://Sprites/pad150.png" id="2_pqreb"]
+[ext_resource type="Script" path="res://Up.gd" id="3_ni32h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Controles" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8tofh")
+
+[node name="TextureButton" type="TextureButton" parent="Controles"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+texture_normal = ExtResource("2_pqreb")
+
+[node name="Up" type="Button" parent="Controles/TextureButton"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 6.0
+offset_right = 94.0
+offset_bottom = 37.0
+text = "up"
+script = ExtResource("3_ni32h")
+
+[node name="Down" type="Button" parent="Controles/TextureButton"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 111.0
+offset_right = 99.0
+offset_bottom = 142.0
+text = "down"
+
+[node name="Left" type="Button" parent="Controles/TextureButton"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 61.0
+offset_right = 45.0
+offset_bottom = 92.0
+text = "left"
+
+[node name="Right" type="Button" parent="Controles/TextureButton"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 59.0
+offset_right = 150.0
+offset_bottom = 90.0
+text = "right"
+
+[connection signal="pressed" from="Controles/TextureButton/Up" to="Controles/TextureButton/Up" method="_on_pressed"]

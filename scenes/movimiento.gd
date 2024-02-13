@@ -1,5 +1,7 @@
 extends CharacterBody2D
-
+'''
+Mov del icono, agregado a escena
+'''
 @export var speed : float
 
 func _process(_delta):

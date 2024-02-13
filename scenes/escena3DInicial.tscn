@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx7nafk7ej383"]
+[gd_scene load_steps=11 format=3 uid="uid://dx7nafk7ej383"]
 
 [ext_resource type="Texture2D" uid="uid://b5oluxj8alk13" path="res://assets/tilemap.png" id="1_ugduh"]
+[ext_resource type="Script" path="res://scenes/Control.gd" id="3_tthu5"]
 [ext_resource type="PackedScene" uid="uid://csuioncyn8vy0" path="res://scenes/gato.tscn" id="4_56p7a"]
+[ext_resource type="Script" path="res://scenes/PanelContainer.gd" id="4_e852p"]
 
 [sub_resource type="GDScript" id="GDScript_dllie"]
 
@@ -656,7 +658,10 @@ navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_1gtmy")
 
 [sub_resource type="GDScript" id="GDScript_65373"]
-script/source = "extends CharacterBody2D
+script/source = "extends Node2D
+'''
+
+extends CharacterBody2D
 
 var speed = 300
 
@@ -667,7 +672,14 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_collide(velocity * delta)
+
+'''
 "
+
+[sub_resource type="Theme" id="Theme_7c8rc"]
+Button/colors/font_color = Color(0.87451, 0.87451, 0.87451, 1)
+Button/colors/font_hover_color = Color(0.47451, 0.580392, 0.513726, 1)
+Button/colors/font_hover_pressed_color = Color(0.0117647, 0.952941, 0.113725, 1)
 
 [node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_dllie")
@@ -681,3 +693,28 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 131072, 0, 3, 131072, 
 [node name="Node2D2" parent="." instance=ExtResource("4_56p7a")]
 position = Vector2(-63, 53)
 script = SubResource("GDScript_65373")
+
+[node name="Controles" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_7c8rc")
+script = ExtResource("3_tthu5")
+
+[node name="PanelContainer" type="PanelContainer" parent="Controles"]
+layout_mode = 0
+offset_left = -143.0
+offset_top = 234.0
+offset_right = 108.0
+offset_bottom = 302.0
+script = ExtResource("4_e852p")
+
+[node name="TextureButton" type="TextureButton" parent="Controles/PanelContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Controles/PanelContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="Controles/PanelContainer"]
+layout_mode = 2

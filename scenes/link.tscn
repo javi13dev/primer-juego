@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dg0vq10q8tc52" path="res://Sprites/link/2.png" id="12_048e2"]
 [ext_resource type="Script" path="res://scenes/AnimationTree.gd" id="13_m2nk4"]
 
-[sub_resource type="Animation" id="Animation_cft0m"]
-resource_name = "Run"
+[sub_resource type="Animation" id="Animation_rpxcg"]
+resource_name = "Idle"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -24,10 +24,10 @@ tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("2_shb2n"), ExtResource("1_6p2f8"), ExtResource("3_pvuhs"), ExtResource("4_qujpx"), ExtResource("5_0lpbv"), ExtResource("6_tqs2r"), ExtResource("7_xq35r"), ExtResource("8_1n8bx"), ExtResource("9_2q447"), ExtResource("2_shb2n")]
+"values": [ExtResource("2_shb2n"), ExtResource("11_ebj3c"), ExtResource("12_048e2"), ExtResource("2_shb2n"), ExtResource("11_ebj3c"), ExtResource("12_048e2")]
 }
 
 [sub_resource type="Animation" id="Animation_2g84q"]
@@ -57,6 +57,22 @@ tracks/1/keys = {
 "values": [Vector2(-0.375, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_cft0m"]
+resource_name = "Run"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_shb2n"), ExtResource("1_6p2f8"), ExtResource("3_pvuhs"), ExtResource("4_qujpx"), ExtResource("5_0lpbv"), ExtResource("6_tqs2r"), ExtResource("7_xq35r"), ExtResource("8_1n8bx"), ExtResource("9_2q447"), ExtResource("2_shb2n")]
+}
+
 [sub_resource type="Animation" id="Animation_ffiqn"]
 resource_name = "Transform"
 tracks/0/type = "value"
@@ -70,22 +86,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(120, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_rpxcg"]
-resource_name = "Idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("2_shb2n"), ExtResource("11_ebj3c"), ExtResource("12_048e2"), ExtResource("2_shb2n"), ExtResource("11_ebj3c"), ExtResource("12_048e2")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l30np"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://basmgmi1bnu2e"]
+
+[ext_resource type="Script" path="res://Play.gd" id="1_61cyy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control_inicio" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 232.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel_inicio" type="Panel" parent="Control_inicio"]
+offset_right = 230.0
+offset_bottom = 201.0
+size_flags_horizontal = 4
+
+[node name="Play" type="Button" parent="Control_inicio/Panel_inicio"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 54.0
+offset_right = 170.0
+offset_bottom = 85.0
+text = "INICIAR JUEGO"
+script = ExtResource("1_61cyy")
+
+[node name="Opciones" type="Button" parent="Control_inicio/Panel_inicio"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 91.0
+offset_right = 168.0
+offset_bottom = 122.0
+text = "OPCIONES"
+
+[node name="Salir del juego" type="Button" parent="Control_inicio/Panel_inicio"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 125.0
+offset_right = 166.0
+offset_bottom = 156.0
+text = "SALIR"
+
+[connection signal="pressed" from="Control_inicio/Panel_inicio/Play" to="Control_inicio/Panel_inicio/Play" method="_on_pressed"]

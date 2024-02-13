@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dpho7muxft30b"]
+
+[node name="Opciones" type="Node2D"]
+
+[node name="Control_opciones" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 220.0
+offset_bottom = 191.0
+
+[node name="Panel" type="Panel" parent="Control_opciones"]
+layout_mode = 0
+offset_right = 165.0
+offset_bottom = 168.0
+
+[node name="Guardar partida" type="Button" parent="Control_opciones/Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 66.0
+offset_right = 150.0
+offset_bottom = 98.0
+text = "Guardar partida
+"
+
+[node name="Atras" type="Button" parent="Control_opciones/Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 106.0
+offset_right = 104.0
+offset_bottom = 137.0
+text = "Atrás
+"
