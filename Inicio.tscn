@@ -1,45 +1,86 @@
-[gd_scene load_steps=2 format=3 uid="uid://basmgmi1bnu2e"]
+[gd_scene load_steps=6 format=3 uid="uid://basmgmi1bnu2e"]
 
 [ext_resource type="Script" path="res://Play.gd" id="1_61cyy"]
+[ext_resource type="FontFile" uid="uid://3ab1nju8g1l3" path="res://fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="1_n1xfj"]
+[ext_resource type="FontFile" uid="uid://drd81v20b2ify" path="res://fonts/kirifont/KiriFont.ttf" id="2_vokod"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o781v"]
+font = ExtResource("1_n1xfj")
+font_size = 30
+font_color = Color(0.65098, 0.0784314, 1, 1)
+shadow_size = 5
+
+[sub_resource type="Theme" id="Theme_yr852"]
+default_font_size = 0
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Control_inicio" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 232.0
-offset_bottom = 200.0
+offset_right = 347.0
+offset_bottom = 305.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Panel_inicio" type="Panel" parent="Control_inicio"]
-offset_right = 230.0
-offset_bottom = 201.0
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 291.0
 size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Control_inicio/Panel_inicio"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 35.0
+offset_right = 244.0
+offset_bottom = 72.0
+text = "GODZLER"
+label_settings = SubResource("LabelSettings_o781v")
 
 [node name="Play" type="Button" parent="Control_inicio/Panel_inicio"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 54.0
-offset_right = 170.0
-offset_bottom = 85.0
+offset_left = 77.0
+offset_top = 98.0
+offset_right = 234.0
+offset_bottom = 129.0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_yr852")
+theme_override_colors/font_color = Color(0, 0.509804, 0, 1)
+theme_override_colors/font_hover_color = Color(0.580392, 0.894118, 0, 1)
+theme_override_fonts/font = ExtResource("2_vokod")
 text = "INICIAR JUEGO"
 script = ExtResource("1_61cyy")
 
 [node name="Opciones" type="Button" parent="Control_inicio/Panel_inicio"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 91.0
-offset_right = 168.0
-offset_bottom = 122.0
+offset_left = 94.0
+offset_top = 153.0
+offset_right = 213.0
+offset_bottom = 184.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0.509804, 0, 1)
+theme_override_colors/font_hover_color = Color(0.580392, 0.894118, 0, 1)
+theme_override_fonts/font = ExtResource("2_vokod")
 text = "OPCIONES"
 
 [node name="Salir del juego" type="Button" parent="Control_inicio/Panel_inicio"]
 layout_mode = 0
-offset_left = 51.0
-offset_top = 125.0
-offset_right = 166.0
-offset_bottom = 156.0
+offset_left = 99.0
+offset_top = 211.0
+offset_right = 214.0
+offset_bottom = 242.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0.509804, 0, 1)
+theme_override_colors/font_hover_color = Color(0.580392, 0.894118, 0, 1)
+theme_override_fonts/font = ExtResource("2_vokod")
 text = "SALIR"
+
+[node name="TextureButton" type="TextureButton" parent="Control_inicio/Panel_inicio"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 237.0
+offset_right = 169.0
+offset_bottom = 277.0
 
 [connection signal="pressed" from="Control_inicio/Panel_inicio/Play" to="Control_inicio/Panel_inicio/Play" method="_on_pressed"]

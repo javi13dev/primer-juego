@@ -37,7 +37,3 @@ func _on_animation_player_animation_started(anim_name):
 		"Run":
 			pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

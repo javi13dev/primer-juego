@@ -1,5 +1,9 @@
 extends Node
 
+# para guardar la escena a nivel global
+var change_scene = "res://scenes/escena3DInicial.tscn"
+
+# Para guardar la puntuación del personaje a nivel global
 var score : int
 
 # Movimiento del jugador
