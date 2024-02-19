@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://djn84vsdfw5ef"]
 
 [ext_resource type="Texture2D" uid="uid://cj2h78duhc375" path="res://Sprites/link/40.png" id="1_6p2f8"]
-[ext_resource type="Script" path="res://scenes/link.gd" id="1_t8hng"]
+[ext_resource type="Script" path="res://scripts/link.gd" id="1_t8hng"]
 [ext_resource type="Texture2D" uid="uid://fs1l7mi5hgwh" path="res://Sprites/link/0.png" id="2_shb2n"]
 [ext_resource type="Texture2D" uid="uid://dgujluypei4vg" path="res://Sprites/link/41.png" id="3_pvuhs"]
 [ext_resource type="Texture2D" uid="uid://c8o7mw4dphtdy" path="res://Sprites/link/42.png" id="4_qujpx"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cdjpfh54u43a6" path="res://Sprites/link/47.png" id="9_2q447"]
 [ext_resource type="Texture2D" uid="uid://br7dly4cintgj" path="res://Sprites/link/1.png" id="11_ebj3c"]
 [ext_resource type="Texture2D" uid="uid://dg0vq10q8tc52" path="res://Sprites/link/2.png" id="12_048e2"]
-[ext_resource type="Script" path="res://scenes/AnimationTree.gd" id="13_m2nk4"]
+[ext_resource type="Script" path="res://scripts/AnimationTree.gd" id="13_m2nk4"]
 
 [sub_resource type="Animation" id="Animation_rpxcg"]
 resource_name = "Idle"

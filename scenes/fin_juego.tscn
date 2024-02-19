@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5xoei1di2r5j"]
+
+[ext_resource type="Texture2D" uid="uid://b4hhk114htiyf" path="res://Sprites/pantalla_inicio.png" id="1_awf7s"]
+[ext_resource type="FontFile" uid="uid://drd81v20b2ify" path="res://fonts/kirifont/KiriFont.ttf" id="2_xdjq6"]
+
+[node name="Fin_juego" type="CanvasLayer"]
+
+[node name="PantallaInicio" type="Sprite2D" parent="."]
+position = Vector2(575.5, 321.625)
+scale = Vector2(1.12207, 0.783742)
+texture = ExtResource("1_awf7s")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 490.0
+offset_top = 298.0
+offset_right = 733.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("2_xdjq6")
+theme_override_font_sizes/font_size = 20
+text = "
+fin del juego"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ciwikehy8w3gk"]
 
-[ext_resource type="Script" path="res://loading.gd" id="1_nltt7"]
+[ext_resource type="Script" path="res://scripts/loading.gd" id="1_4bk55"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,7 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 997.0
 offset_bottom = 461.0
-script = ExtResource("1_nltt7")
+script = ExtResource("1_4bk55")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Control"]
 color = Color(0.576471, 0.768627, 1, 1)

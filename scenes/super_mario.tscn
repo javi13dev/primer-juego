@@ -1,0 +1,124 @@
+[gd_scene load_steps=14 format=3 uid="uid://7fxokcq1koeh"]
+
+[ext_resource type="Script" path="res://SuperMario.gd" id="1_mcpgy"]
+[ext_resource type="Texture2D" uid="uid://bkktbd8v56xsf" path="res://Sprites/mariosheet.png" id="2_o6hya"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x64ho"]
+radius = 13.0
+height = 60.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiuu8"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(300, 0, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctcow"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(0, 98, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1aw3"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(300, 196, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h5tl"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(100, 294, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of3c4"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(300, 0, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h77yb"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(0, 196, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43lxw"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(100, 196, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw0la"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(300, 294, 100, 98)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5ra2"]
+atlas = ExtResource("2_o6hya")
+region = Rect2(0, 392, 100, 98)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lgvr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiuu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctcow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1aw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h5tl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1aw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctcow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiuu8")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of3c4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h77yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43lxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h77yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw0la")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5ra2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43lxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h77yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of3c4")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[node name="SuperMario" type="CharacterBody2D"]
+script = ExtResource("1_mcpgy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_o6hya")
+hframes = 5
+vframes = 6
+frame = 22
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, -15)
+shape = SubResource("CapsuleShape2D_x64ho")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 1)
+sprite_frames = SubResource("SpriteFrames_8lgvr")
+animation = &"Idle"
+frame_progress = 0.688193

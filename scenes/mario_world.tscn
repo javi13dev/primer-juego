@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://paps16p2dlk7"]
+
+[ext_resource type="PackedScene" uid="uid://7fxokcq1koeh" path="res://scenes/super_mario.tscn" id="1_5b0tm"]
+
+[node name="MarioWorld" type="Node2D"]
+
+[node name="SuperMario" parent="." instance=ExtResource("1_5b0tm")]
+position = Vector2(160, 106)
